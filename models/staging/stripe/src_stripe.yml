@@ -6,6 +6,10 @@ sources:
     schema: stripe
     tables:
       - name: payment
+        description: Payment data from our jaffle shop app
+        columns:
+          - name:  paymentmethod
+            description: "{{ doc('strip') }}"
         loaded_at_field: _BATCHED_AT
         freshness:
           warn_after: {count: 12, period: hour}
